@@ -16,9 +16,9 @@ The dealer requests a new card until it exceeds the highest valid points of a pl
 After the dealer finishes winners and losers are declared. If a player has a natural blackjack the payout is 3:2.
 
 Things to improve:
-..* The validation for player's bankroll, as you'll see it starts in invalid mode until you type something
-..* Add unit testing
-..* Improve the AI of the dealer. Currently it asks for a card until his points are above the highest points of a player.
+* The validation for player's bankroll, as you'll see it starts in invalid mode until you type something
+* Add unit testing
+* Improve the AI of the dealer. Currently it asks for a card until his points are above the highest points of a player.
 
 Credits for the cards images go to [edgeuplink](https://github.com/edgeuplink/blackjackin)
 
