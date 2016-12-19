@@ -1,0 +1,336 @@
+$green: #42A948;
+$gold: #ffeb3b;
+
+.player-component {
+  border: 1px solid #eee;
+  box-shadow: 0 0 1px 1px #eee;
+  padding: 0;
+  margin: 0;
+  max-width: 300px;
+  margin-bottom: 20px;
+
+  .ng-valid[required], .ng-valid.required {
+    border-left: 5px solid #42A948; /* green */
+  }
+
+  .ng-invalid:not(form):not(.ng-untouched) {
+    border-left: 5px solid #a94442; /* red */
+  }
+
+  .player-gameon {
+    position: relative;
+
+    .player-header {
+      height: 40px;
+      background: #0aadff;
+      line-height: 40px;
+      font-size: 20px;
+      position: relative;
+
+      .player-name{
+        color:#fff;
+        padding-left: 10px;
+      }
+
+      .player-bankroll {
+        position: absolute;
+        right: 10px;
+        font-weight: bold;
+        color: #ffeb3b;
+      }
+    }
+
+    .total-bet-container,
+    .player-points {
+      background: #eee;
+      height: 30px;
+      line-height: 30px;
+      font-size: 16px;
+      position: relative;
+
+      .total-bet-value {
+        color: red;
+        position: absolute;
+        right: 10px;
+        font-weight: bold
+      }
+
+      .player-points-value {
+        color: $green;
+        position: absolute;
+        right: 10px;
+        font-weight: bold
+      }
+    }
+
+    .betting-options {
+      width: 100%;
+      display: block;
+      padding: 10px 0;
+
+      li {
+        display: inline-block;
+        vertical-align: top;
+        width: 28%;
+        margin-right: 2%;
+        margin-left: 2%;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .betting-value {
+          border: 0;
+          box-shadow: none;
+          height: 60px;
+          width: 60px;
+
+          &.five {
+            background: url(app/images/casino_chip_5.png) no-repeat 50% 50% transparent;
+            background-size: cover;
+          }
+
+          &.ten {
+            background: url(app/images/casino_chip_10.png) no-repeat 50% 50% transparent;
+            background-size: cover;
+          }
+
+          &.twenty {
+            background: url(app/images/casino_chip_20.png) no-repeat 50% 50% transparent;
+            background-size: cover;
+          }
+
+          &.disabled {
+            opacity: 0.5;
+            cursor: default;
+          }
+        }
+      }
+    }
+
+    .player-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      .player-background-hider {
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.6;
+        top: 0;
+        left: 0;
+        display: block;
+      }
+
+      .player-overlay-message {
+        position: absolute;
+        background: #fff;
+        width: 60%;
+        height: 50%;
+        left: 20%;
+        top: 20%;
+        text-align: center;
+        font-weight: bold;
+        padding-top: 10%;
+
+        .natural-blackjack-notification {
+          color: $gold;
+        }
+      }
+
+      &.lost .player-overlay-message {
+        color: red;
+      }
+      &.won .player-overlay-message {
+        color: $green;
+      }
+
+    }
+
+    .player-cards-container {
+      .player-cards-list {
+        padding: 10px 0;
+
+        .playing-card {
+          display: inline-block;
+          width: 80px;
+          height: 100px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          vertical-align: top;
+
+          &.card-suit-club {
+            &.card-value-2 {
+              background-image: url(app/images/c2.png);
+            }
+            &.card-value-3 {
+              background-image: url(app/images/c3.png);
+            }
+            &.card-value-4 {
+              background-image: url(app/images/c4.png);
+            }
+            &.card-value-5 {
+              background-image: url(app/images/c5.png);
+            }
+            &.card-value-6 {
+              background-image: url(app/images/c6.png);
+            }
+            &.card-value-7 {
+              background-image: url(app/images/c7.png);
+            }
+            &.card-value-8 {
+              background-image: url(app/images/c8.png);
+            }
+            &.card-value-9 {
+              background-image: url(app/images/c9.png);
+            }
+            &.card-value-10 {
+              background-image: url(app/images/c10.png);
+            }
+            &.card-value-11 {
+              background-image: url(app/images/c1.png);
+            }
+            &.card-value-12 {
+              background-image: url(app/images/c11.png);
+            }
+            &.card-value-13 {
+              background-image: url(app/images/c12.png);
+            }
+            &.card-value-14 {
+              background-image: url(app/images/c13.png);
+            }
+          }
+          &.card-suit-spade {
+            &.card-value-2 {
+              background-image: url(app/images/s2.png);
+            }
+            &.card-value-3 {
+              background-image: url(app/images/s3.png);
+            }
+            &.card-value-4 {
+              background-image: url(app/images/s4.png);
+            }
+            &.card-value-5 {
+              background-image: url(app/images/s5.png);
+            }
+            &.card-value-6 {
+              background-image: url(app/images/s6.png);
+            }
+            &.card-value-7 {
+              background-image: url(app/images/s7.png);
+            }
+            &.card-value-8 {
+              background-image: url(app/images/s8.png);
+            }
+            &.card-value-9 {
+              background-image: url(app/images/s9.png);
+            }
+            &.card-value-10 {
+              background-image: url(app/images/s10.png);
+            }
+            &.card-value-11 {
+              background-image: url(app/images/s1.png);
+            }
+            &.card-value-12 {
+              background-image: url(app/images/s11.png);
+            }
+            &.card-value-13 {
+              background-image: url(app/images/s12.png);
+            }
+            &.card-value-14 {
+              background-image: url(app/images/s13.png);
+            }
+          }
+          &.card-suit-heart {
+            &.card-value-2 {
+              background-image: url(app/images/h2.png);
+            }
+            &.card-value-3 {
+              background-image: url(app/images/h3.png);
+            }
+            &.card-value-4 {
+              background-image: url(app/images/h4.png);
+            }
+            &.card-value-5 {
+              background-image: url(app/images/h5.png);
+            }
+            &.card-value-6 {
+              background-image: url(app/images/h6.png);
+            }
+            &.card-value-7 {
+              background-image: url(app/images/h7.png);
+            }
+            &.card-value-8 {
+              background-image: url(app/images/h8.png);
+            }
+            &.card-value-9 {
+              background-image: url(app/images/h9.png);
+            }
+            &.card-value-10 {
+              background-image: url(app/images/h10.png);
+            }
+            &.card-value-11 {
+              background-image: url(app/images/h1.png);
+            }
+            &.card-value-12 {
+              background-image: url(app/images/h11.png);
+            }
+            &.card-value-13 {
+              background-image: url(app/images/h12.png);
+            }
+            &.card-value-14 {
+              background-image: url(app/images/h13.png);
+            }
+          }
+          &.card-suit-diamond {
+            &.card-value-2 {
+              background-image: url(app/images/d2.png);
+            }
+            &.card-value-3 {
+              background-image: url(app/images/d3.png);
+            }
+            &.card-value-4 {
+              background-image: url(app/images/d4.png);
+            }
+            &.card-value-5 {
+              background-image: url(app/images/d5.png);
+            }
+            &.card-value-6 {
+              background-image: url(app/images/d6.png);
+            }
+            &.card-value-7 {
+              background-image: url(app/images/d7.png);
+            }
+            &.card-value-8 {
+              background-image: url(app/images/d8.png);
+            }
+            &.card-value-9 {
+              background-image: url(app/images/d9.png);
+            }
+            &.card-value-10 {
+              background-image: url(app/images/d10.png);
+            }
+            &.card-value-11 {
+              background-image: url(app/images/d1.png);
+            }
+            &.card-value-12 {
+              background-image: url(app/images/d11.png);
+            }
+            &.card-value-13 {
+              background-image: url(app/images/d12.png);
+            }
+            &.card-value-14 {
+              background-image: url(app/images/d13.png);
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+}

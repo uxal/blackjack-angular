@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,gBAAiB;EAEf,OAAO,EAAE,MAAM;EAEf,iCAAiB;IACf,UAAU,EAAE,IAAI;IAChB,OAAO,EAAE,CAAC;IACV,MAAM,EAAE,QAAQ;IAEhB,oCAAG;MACD,OAAO,EAAE,YAAY;MACrB,YAAY,EAAE,IAAI;MAClB,cAAc,EAAE,GAAG;MACnB,aAAa,EAAE,IAAI;EAIvB,gCAAgB;IACd,KAAK,EAAE,IAAI;IACX,UAAU,EAAE,IAAI",
+"sources": ["loby.component.scss"],
+"names": [],
+"file": "loby.component.css"
+}

@@ -1,0 +1,23 @@
+<div id="blackjack-lobby" class="container">
+  <h2>Welcome to this Angular 2 Blackjack game</h2>
+  <h4>Please select the number of players and hit play!</h4>
+  <select (change)="onNumberOfPlayersSelected($event.target.value)">
+    <option value="0" selected>Select how many players will play</option>
+    <option value="1">1 player</option>
+    <option value="2">2 players</option>
+    <option value="3">3 players</option>
+    <option value="4">4 players</option>
+  </select>
+
+
+  <div *ngIf="numberOfPlayersSelected > 0" class="player-names">
+    <form (ngSubmit)="startGame()" #playerSelectionForm="ngForm">
+      <button type="submit" class="btn btn-success start-game-btn" [disabled]="!playerSelectionForm.form.valid">PLAY!</button>
+      <ul class="list-of-players">
+        <li *ngFor="let player of availablePlayers">
+          <blackjack-player [player]="player"></blackjack-player>
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>

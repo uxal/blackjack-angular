@@ -1,0 +1,16 @@
+#blackjack-lobby {
+  padding: 20px 0; }
+  #blackjack-lobby .list-of-players {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0; }
+    #blackjack-lobby .list-of-players li {
+      display: inline-block;
+      margin-right: 20px;
+      vertical-align: top;
+      margin-bottom: 20px; }
+  #blackjack-lobby .start-game-btn {
+    width: 100%;
+    margin-top: 10px; }
+
+/*# sourceMappingURL=loby.component.css.map */

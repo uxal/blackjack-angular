@@ -1,0 +1,21 @@
+<div id="blackjack-game" class="container">
+  <div class="header">
+    <h1>Good luck to all participants</h1>
+    <button *ngIf="!gameStarted" type="button" class="btn btn-success" (click)="dealHand()">Deal Hand</button>
+    <button *ngIf="gameStarted" type="button" class="btn btn-success" (click)="newRound()">New round</button>
+    <button type="button" class="btn btn-danger" (click)="goToLobby()">Back to lobby</button>
+  </div>
+  <div *ngIf="notAllPlayersAddedBet" class="alert-box">We can't play until all players bet something!</div>
+  <div class="table-container">
+    <!-- On the top of the page show the dealer -->
+    <div class="dealer-area">
+      <blackjack-player [player]="dealer" [gameModeOn]="true"></blackjack-player>
+    </div>
+    <!-- And now render the list of players -->
+    <ul class="players-area">
+      <li class="player-container" *ngFor="let player of players">
+        <blackjack-player [player]="player" [gameModeOn]="true"></blackjack-player>
+      </li>
+    </ul>
+  </div>
+</div>
